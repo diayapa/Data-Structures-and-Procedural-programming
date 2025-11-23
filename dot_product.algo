@@ -1,0 +1,8 @@
+Procédure dot_product(v1, v2, n, ps)
+
+    ps = 0
+    Pour i ← 1 à n faire
+        ps ← ps + v1[i] * v2[i]
+    Fin 
+    
+Fin 

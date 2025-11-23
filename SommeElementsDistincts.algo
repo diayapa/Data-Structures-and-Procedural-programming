@@ -1,0 +1,43 @@
+DEBUT ALGORITHME SommeElementsDistincts
+ 
+ Var
+   T1 ARRAY_OF INTEGER[4]
+   T2 ARRAY_OF INTEGER[5]
+   somme, val_tab: integer
+   trouvé: boolean
+
+ BEGIN
+        T1 := {3, 1, 7, 9}
+        T2 := {2, 4, 1, 9, 3}
+        
+        somme = 0
+
+        // Traitement du premier tableau
+        Pour i = 0 à T1.length-1 faire
+            val_tab = T1[i]
+
+            pour j = 0 à T2.length-1 faire
+                 si T2[j] = val_tab alors
+                     trouvé = vrai
+                 sinon
+                     somme = somme + val_tab
+                 fin
+            fin 
+        fin
+
+        // Traitement du second tableau
+        Pour j = 0 à T2.length-1 faire
+            val_tab = T2[j]
+
+            pour i = 0 à T1.length-1 faire
+                 si T1[i] = val_tab alors
+                     trouvé = vrai
+                 sinon
+                     somme = somme + val_tab
+                 fin
+            fin 
+        fin
+
+        Afficher "Somme des éléments distincts = ", somme
+
+END

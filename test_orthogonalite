@@ -1,0 +1,28 @@
+Algorithme Test_Orthogonalite
+
+dim , n sont des entiers
+
+    Début
+        Lire n 
+
+        Pour k ← 1 à n faire
+            Lire dim        
+
+            Pour i = 1 à dim faire
+                Lire v1[i]
+            Fin 
+
+            Pour i = 1 à dim faire
+                Lire v2[i]
+            Fin
+
+            // Appeller la procédure dot_product
+            Appeler dot_product(v1, v2, dim, ps)
+
+            Si ps = 0 alors
+                Afficher "Les vecteurs du couple ", k, " sont orthogonaux."
+            Sinon
+                Afficher "Les vecteurs du couple ", k, " ne sont pas orthogonaux."
+            Fin Si
+        Fin
+    Fin
